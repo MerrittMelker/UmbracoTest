@@ -1,0 +1,71 @@
+﻿
+<form name="productionForm"
+      ng-controller="Productions.ProductionEditController"
+      ng-show="loaded"
+      ng-submit="save(production)"
+      val-form-manager>
+    <umb-panel>
+        <umb-header tabs="tabs.tab">
+            <div class="span4">
+                <input type="text"
+                       class="umb-headline"
+                       localize="placeholder"
+                       select-on-focus
+                       required
+                       placeholder="@placeholders_entername"
+                       ng-model="production.ProductionName" />
+            </div>
+            <div class="span8">
+                <div class="btn-toolbar pull-right umb-btn-toolbar">
+                    <button type="submit" data-hotkey="ctrl+s" class="btn btn-success">
+                        <localize key="buttons_save">Save</localize>
+                    </button>
+                </div>
+            </div>
+        </umb-header>
+        <umb-tab-view>
+            <umb-tab id="tab1" rel="Content" class="active">
+                <div class="umb-pane">
+                    <umb-control-group label="Production Name" description="Production name">
+                        <input type="text" class="umb-editor umb-textstring" ng-model="production.ProductionName" required />
+                    </umb-control-group>
+                    <umb-control-group label="Production Short Name" description="Production Short name">
+                        <input type="text" class="umb-editor umb-textstring" ng-model="production.ProductionShortName" required />
+                    </umb-control-group>
+                    <umb-control-group label="Production ID" description="Production ID">
+                        <input type="text" class="umb-editor umb-textstring" ng-model="production.tProductionID" required />
+                    </umb-control-group>
+                    <umb-control-group label="Production Status" description="Production Status">
+                        <input type="text" class="umb-editor umb-textstring" ng-model="production.Status" required />
+                    </umb-control-group>
+                    <umb-control-group label="Main Image" description="Hero Image for Production">
+                        <umb-media-picker ng-model="production.ProductionHeaderImageID" />
+                    </umb-control-group>
+                    <umb-control-group label="List Image" description="List Image for Production List page and home page">
+                        <umb-media-picker ng-model="production.ProductionListImageID" />
+                    </umb-control-group>
+                </div>
+            </umb-tab>
+            <umb-tab id="tab2" rel="Dates">
+                <div class="umb-pane">
+                    <umb-control-group label="Production Start" description="Production Start">
+                        <div id="datetimepicker1" class="input-append">
+                            <input required name="start" type="text" />
+                            <span class="add-on datepickerbutton">
+                                <i class="icon icon-calendar"></i>
+                            </span>
+                        </div>
+                    </umb-control-group>
+                    <umb-control-group label="Production End" description="Production End">
+                        <div id="datetimepicker2" class="input-append">
+                            <input required name="end" type="text" />
+                            <span class="add-on datepickerbutton">
+                                <i class="icon icon-calendar"></i>
+                            </span>
+                        </div>
+                    </umb-control-group>
+                </div>
+            </umb-tab>
+        </umb-tab-view>
+    </umb-panel>
+</form>

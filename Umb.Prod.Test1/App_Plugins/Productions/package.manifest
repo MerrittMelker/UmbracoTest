@@ -1,0 +1,23 @@
+﻿{
+    propertyEditors: [		
+		{
+			alias: "Productions.ProductionPicker",
+			name: "Production Picker",
+			hideLabel: false,
+			valueType: "INT",
+			editor: {
+				view: "~/App_Plugins/Productions/propertyEditors/ProductionPicker.html"
+			}
+		}
+	],
+
+    javascript: [
+        "~/App_Plugins/Productions/Productions.Resource.js",
+        "~/App_Plugins/Productions/backoffice/productionsTree/Productions.ProductionsTree.Edit.Controller.js",
+        "~/App_Plugins/Productions/backoffice/productionsTree/Productions.ProductionsTree.Delete.Controller.js",
+        "~/App_Plugins/Productions/backoffice/productionsTree/Productions.ProductionsTree.Create.Controller.js",
+        "~/App_Plugins/Productions/backoffice/productionsTree/Productions.ProductionsTree.Edit.RTE.Controller.js",
+        "~/App_Plugins/Productions/umbMediaPicker.Directive.js",
+        "~/App_Plugins/Productions/propertyeditors/productionpicker.controller.js"
+    ]
+} 
